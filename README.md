@@ -49,11 +49,11 @@ If you have any questions, please contact [ MasonShi@88.com ]
 
 > python typora.py {installRoot}/Typora/resources/app.asar workstation/outfile/
 ⋯
-> python typora.py -u workstation/outfile/ workstation/outappasar
+# (patch code in workstation/outfile/dec_app)
+> python typora.py -u workstation/outfile/dec_app workstation/outappasar
 ⋯
 > cp {installRoot}/Typora/resources/app.asar {installRoot}/Typora/resources/app.asar.bak
 > mv workstation/outappasar/app.asar {installRoot}/Typora/resources/app.asar
-# (patch code)
 > node keygen.js
 XXXXXX-XXXXXX-XXXXXX-XXXXXX
 > typora
