@@ -1,6 +1,6 @@
 # typora Cracker
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMas0nShi%2FtyporaCracker.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FMas0nShi%2FtyporaCracker?ref=badge_shield) 
+![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMas0nShi%2FtyporaCracker.svg?type=shield)
 ![GitHub](https://img.shields.io/github/license/Mas0nShi/typoraCracker)
 
 A patch and keygen tools for typora.
@@ -14,7 +14,7 @@ ANY PROBLEMS ARISING FROM THIS WILL BE BORNE BY THE USER (YOU).
 ```
 
 ## Features
-
+- Supports Version 1.0.0+ (At least for now.)
 - Supports ALL OS supported by typora
 
 ## Usage
