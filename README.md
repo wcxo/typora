@@ -1,4 +1,5 @@
 # typora Cracker
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMas0nShi%2FtyporaCracker.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FMas0nShi%2FtyporaCracker?ref=badge_shield) 
 ![GitHub](https://img.shields.io/github/license/Mas0nShi/typoraCracker)
 
