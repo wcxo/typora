@@ -8,6 +8,9 @@ A extract & decryption and pack & encryption tools for typora.
 中文说明请戳[这里](README_CN.md)
 
 ## WARNING
+
+**NOTE:** typoraCracker doesn't provide support for crack, include but not limited to ideas, processes and patch software.
+
 ```
 FOR STUDY AND DISCUSSION ONLY, PLEASE DO NOT ENGAGE IN ANY ILLEGAL ACTS.
 ANY PROBLEMS ARISING FROM THIS WILL BE BORNE BY THE USER (YOU).
