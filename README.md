@@ -9,7 +9,7 @@ A extract & decryption and pack & encryption tools for typora.
 
 ## WARNING
 
-**NOTE:** typoraCracker doesn't provide support for crack, include but not limited to ideas, processes and patch software.
+**NOTE: typoraCracker doesn't provide support for crack.**
 
 ```
 FOR STUDY AND DISCUSSION ONLY, PLEASE DO NOT ENGAGE IN ANY ILLEGAL ACTS.
