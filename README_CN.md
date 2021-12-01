@@ -1,6 +1,6 @@
 # typora Cracker
 
-一个typora的Patch和KeyGen工具
+一个typora的解包&解密，打包&加密工具
 
 ## 敬告
 ```
@@ -18,10 +18,9 @@
 1. `pip install -r requirements.txt`
 2. `python typora.py --help`
 3. 阅读帮助文档及使用。
-4. 修改导出的 License.js。
-5. 替换原目录下的 app.asar。
-6. 运行KeyGen程序。
-7. 正常激活。
+4. 做你想做的事。
+5. 打包并替换原目录下的 app.asar。 
+6. 享受成果。
 
 
 ## 示例

@@ -3,7 +3,7 @@
 ![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMas0nShi%2FtyporaCracker.svg?type=shield)
 ![GitHub](https://img.shields.io/github/license/Mas0nShi/typoraCracker)
 
-A patch and keygen tools for typora.
+A extract & decryption and pack & encryption tools for typora.
 
 中文说明请戳[这里](README_CN.md)
 
@@ -22,10 +22,9 @@ ANY PROBLEMS ARISING FROM THIS WILL BE BORNE BY THE USER (YOU).
 1. `pip install -r requirements.txt`
 2. `python typora.py --help`
 3. read and use.
-4. patch License.js.
-5. replace app.asar.
-6. run keygen.
-7. enjoy it.
+4. do something.
+5. pack and replace app.asar.
+6. enjoy it.
 
 
 ## Example
