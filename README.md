@@ -53,7 +53,7 @@ If you have any questions, please contact [ MasonShi@88.com ]
 ⋯
 > cp {installRoot}/Typora/resources/app.asar {installRoot}/Typora/resources/app.asar.bak
 > mv workstation/outappasar/app.asar {installRoot}/Typora/resources/app.asar
-> node keygen.js
+> node example/keygen.js
 XXXXXX-XXXXXX-XXXXXX-XXXXXX
 > typora
 # (input info)
