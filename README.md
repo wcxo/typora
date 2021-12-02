@@ -18,7 +18,7 @@ ANY PROBLEMS ARISING FROM THIS WILL BE BORNE BY THE USER (YOU).
 
 ## Features
 - Supports Version 1.0.0+ (At least for now.)
-- Supports ALL OS supported by typora
+- Supports ~~ALL OS~~Win/Ubuntu(Tested) supported by typora
 
 ## Usage
 
