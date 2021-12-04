@@ -12,10 +12,21 @@ from base64 import b64decode, b64encode
 from jsbeautifier import beautify
 from jsmin import jsmin
 from os import listdir, urandom, makedirs
-from os.path import isfile, isdir, join as pjoin, split as psplit
+from os.path import isfile, isdir, join as pjoin, split as psplit, exists
 from loguru import logger as log
 from masar import extract_asar, pack_asar
-import argparse
+from shutil import rmtree
+from argparse import ArgumentParser
+import sys
+
+# DEBUG
+DEBUG = False
+
+log.remove()
+if DEBUG:
+    log.add(sys.stderr, level="DEBUG")
+else:
+    log.add(sys.stderr, level="INFO")
 
 key = [0x4B029A9482B3E14E, 0xF157FEB4B4522F80, 0xE25692105308F4BE, 0x6DD58DDDA3EC0DC2]
 aesKey = b""
@@ -51,7 +62,7 @@ def extractWdec(asarPath, path, prettify):
     :return: None
     """
     # try to create empty dir to save extract files
-    path = pjoin(path, "tmp_app")
+    path = pjoin(path, "temp")
     _mkdir(path)
     log.info(f"extract asar file: {asarPath}")
     # extract app.asar to {path}/*
@@ -80,6 +91,9 @@ def extractWdec(asarPath, path, prettify):
         open(pjoin(outPath, name), "wb").write(scode)
         log.success(f"decrypt and save file: {name}")
 
+    rmtree(path)
+    log.debug("remove temp dir")
+
 
 def encScript(_code: bytes, compress):
     if compress:
@@ -99,10 +113,13 @@ def packWenc(path, outPath, compress):
     :param compress: Bool
     :return: None
     """
-    if not isdir(outPath):
+    if isfile(outPath):
         log.error("plz input Directory for app.asar")
         raise NotADirectoryError
-    encFilePath = pjoin(psplit(outPath)[0], "enc_app")
+    if not exists(outPath):
+        _mkdir(outPath)
+
+    encFilePath = pjoin(psplit(outPath)[0], "temp")
     _mkdir(encFilePath)
 
     outFilePath = pjoin(outPath, "app.asar")
@@ -127,9 +144,12 @@ def packWenc(path, outPath, compress):
     pack_asar(encFilePath, outFilePath)
     log.success("pack done")
 
+    rmtree(encFilePath)
+    log.debug("remove temp dir")
+
 
 def main():
-    argParser = argparse.ArgumentParser(
+    argParser = ArgumentParser(
         description="[extract and decryption / pack and encryption] app.asar file from [Typora].",
         epilog="If you have any questions, please contact [ MasonShi@88.com ]")
     argParser.add_argument("asarPath", type=str, help="app.asar file path/dir [input/ouput]")
