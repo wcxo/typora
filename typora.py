@@ -6,8 +6,7 @@
 @Desc: It's all about getting better.
 """
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad
-from Crypto.Util.Padding import unpad
+from Crypto.Util.Padding import pad, unpad
 from base64 import b64decode, b64encode
 from jsbeautifier import beautify
 from jsmin import jsmin
@@ -99,9 +98,9 @@ def encScript(_code: bytes, compress):
     if compress:
         _code = jsmin(_code.decode(), quote_chars="'\"`").encode()
     aesIv = urandom(16)
-    cipherText = aesIv + _code
+    cipherText = _code
     ins = AES.new(key=aesKey, iv=aesIv, mode=AES.MODE_CBC)
-    enc = ins.encrypt(pad(cipherText, 16, 'pkcs7'))
+    enc = aesIv + ins.encrypt(pad(cipherText, 16, 'pkcs7'))
     lCode = b64encode(enc)
     return lCode
 
